@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>文件識別</title>
+    <title>文件识别</title>
     <link rel="icon" type="image/png" href="/static/興宇智能_logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --paper: #faf8f5;
@@ -77,7 +77,7 @@
         }
 
         .header h1 {
-            font-family: 'Noto Serif TC', Georgia, serif;
+            font-family: 'Noto Serif SC', Georgia, serif;
             font-size: 2rem;
             font-weight: 700;
             color: var(--ink);
@@ -147,7 +147,7 @@
         }
 
         .drop-zone-text {
-            font-family: 'Noto Serif TC', serif;
+            font-family: 'Noto Serif SC', serif;
             font-size: 1.1rem;
             color: var(--ink);
             margin-bottom: 4px;
@@ -249,7 +249,7 @@
 
         /* Section Title */
         .section-title {
-            font-family: 'Noto Serif TC', serif;
+            font-family: 'Noto Serif SC', serif;
             font-size: 0.85rem;
             font-weight: 600;
             color: var(--ink-light);
@@ -414,7 +414,7 @@
         }
 
         .jobs-title {
-            font-family: 'Noto Serif TC', serif;
+            font-family: 'Noto Serif SC', serif;
             font-size: 1rem;
             color: var(--ink-light);
         }
@@ -904,7 +904,7 @@
         }
 
         .modal-title {
-            font-family: 'Noto Serif TC', serif;
+            font-family: 'Noto Serif SC', serif;
             font-size: 1.1rem;
             font-weight: 600;
             color: var(--ink);
@@ -982,8 +982,8 @@
 <body>
     <div class="container">
         <header class="header">
-            <h1>文件識別</h1>
-            <p>將掃描檔或圖片 PDF 轉換為可編輯格式</p>
+            <h1>文件识别</h1>
+            <p>将扫描件或图片 PDF 转换为可编辑格式</p>
         </header>
 
         <div class="drop-zone" id="dropZone">
@@ -995,14 +995,14 @@
                     <line x1="9" y1="15" x2="15" y2="15"></line>
                 </svg>
             </div>
-            <div class="drop-zone-text">拖曳 PDF 檔案至此</div>
-            <div class="drop-zone-hint">或點擊選擇檔案</div>
+            <div class="drop-zone-text">拖拽 PDF 文件至此</div>
+            <div class="drop-zone-hint">或点击选择文件</div>
             <input type="file" class="file-input" id="fileInput" accept=".pdf" multiple>
         </div>
 
         <div class="file-list" id="fileList"></div>
 
-        <div class="section-title">輸出格式</div>
+        <div class="section-title">输出格式</div>
         <div class="format-options">
             <label class="format-option" id="modePdf">
                 <input type="checkbox" name="outputMode" value="pdf">
@@ -1014,8 +1014,8 @@
                         <line x1="16" y1="17" x2="8" y2="17"></line>
                     </svg>
                 </div>
-                <div class="format-title">可選取 PDF</div>
-                <div class="format-desc">保留原版面，可複製文字</div>
+                <div class="format-title">可选中 PDF</div>
+                <div class="format-desc">保留原版面，可复制文字</div>
             </label>
             <label class="format-option" id="modeMarkdown">
                 <input type="checkbox" name="outputMode" value="markdown">
@@ -1027,7 +1027,7 @@
                     </svg>
                 </div>
                 <div class="format-title">Markdown</div>
-                <div class="format-desc">結構化純文字</div>
+                <div class="format-desc">结构化纯文本</div>
             </label>
             <label class="format-option" id="modeWord">
                 <input type="checkbox" name="outputMode" value="word">
@@ -1039,19 +1039,19 @@
                     </svg>
                 </div>
                 <div class="format-title">Word</div>
-                <div class="format-desc">可編輯文件</div>
+                <div class="format-desc">可编辑文档</div>
             </label>
         </div>
 
-        <button class="btn-process" id="processBtn" disabled>開始轉換</button>
+        <button class="btn-process" id="processBtn" disabled>开始转换</button>
 
         <section class="jobs-section">
             <div class="jobs-header" id="jobsHeader">
-                <span class="jobs-title" id="jobsTitle">轉換結果</span>
+                <span class="jobs-title" id="jobsTitle">转换结果</span>
                 <div class="jobs-actions">
                     <button class="btn-action btn-action-download" onclick="downloadAllCompleted()">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                        全部下載
+                        全部下载
                     </button>
                     <button class="btn-action btn-action-clear" onclick="dismissAllCompleted()">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
@@ -1066,22 +1066,22 @@
     <div class="toast" id="toast"></div>
 
     <div class="batch-actions" id="batchActions">
-        <span class="batch-count" id="batchCount">已選取 0 項</span>
+        <span class="batch-count" id="batchCount">已选中 0 项</span>
         <button class="batch-btn batch-btn-download" onclick="batchDownload()">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-            下載
+            下载
         </button>
         <button class="batch-btn batch-btn-dismiss" onclick="batchDismiss()">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
             移除
         </button>
-        <button class="batch-btn batch-btn-clear" onclick="clearSelection()">取消選取</button>
+        <button class="batch-btn batch-btn-clear" onclick="clearSelection()">取消选中</button>
     </div>
 
     <div class="modal" id="previewModal">
         <div class="modal-content">
             <div class="modal-header">
-                <span class="modal-title" id="modalTitle">內容預覽</span>
+                <span class="modal-title" id="modalTitle">内容预览</span>
                 <button class="modal-close" onclick="closeModal()">&times;</button>
             </div>
             <div class="modal-body">
@@ -1157,7 +1157,7 @@
             const current = Number.isFinite(progress.current) ? progress.current : 0;
             const total = Number.isFinite(progress.total) ? progress.total : 0;
             const percent = Number.isFinite(progress.percent) ? progress.percent : 0;
-            const message = typeof progress.message === 'string' ? progress.message : '處理中...';
+            const message = typeof progress.message === 'string' ? progress.message : '处理中...';
             const status = typeof progress.status === 'string' ? progress.status : '';
             return { current, total, percent, message, status };
         }
@@ -1198,10 +1198,10 @@
                         const jobId = item;
                         const job = {
                             job_id: jobId,
-                            filename: '重新連線中...',
+                            filename: '重新连线中...',
                             status: 'processing',
                             mode: 'unknown',
-                            progress: { percent: 0, message: '重新連線中...', status: 'waiting' }
+                            progress: { percent: 0, message: '重新连线中...', status: 'waiting' }
                         };
                         activeJobs[jobId] = job;
                         ensureJobOrder(jobId);
@@ -1212,10 +1212,10 @@
                     if (!jobId) return;
                     const job = {
                         job_id: jobId,
-                        filename: item.filename || '未命名檔案',
+                        filename: item.filename || '未命名文件',
                         status: item.status || 'processing',
                         mode: item.mode || 'ocr',
-                        progress: normalizeProgress(item.progress) || { percent: 0, message: '重新連線中...' }
+                        progress: normalizeProgress(item.progress) || { percent: 0, message: '重新连线中...' }
                     };
                     activeJobs[jobId] = job;
                     ensureJobOrder(jobId);
@@ -1376,7 +1376,7 @@
         function updateBatchActions() {
             const count = selectedJobs.size;
             if (count > 0) {
-                batchCount.textContent = `已選取 ${count} 項`;
+                batchCount.textContent = `已选中 ${count} 项`;
                 batchActions.classList.add('show');
             } else {
                 batchActions.classList.remove('show');
@@ -1389,7 +1389,7 @@
 
             if (total > 0) {
                 jobsHeader.classList.add('show');
-                jobsTitle.textContent = completed > 0 ? `${completed} 項已完成` : '處理中...';
+                jobsTitle.textContent = completed > 0 ? `${completed} 项已完成` : '处理中...';
             } else {
                 jobsHeader.classList.remove('show');
             }
@@ -1432,7 +1432,7 @@
             }
             updateBatchActions();
             updateJobsHeader();
-            showToast(`開始下載 ${jobIds.length} 個檔案`);
+            showToast(`开始下载 ${jobIds.length} 个文件`);
         }
 
         async function dismissAllCompleted() {
@@ -1451,7 +1451,7 @@
             }
             updateBatchActions();
             updateJobsHeader();
-            showToast(`已清除 ${jobIds.length} 項`);
+            showToast(`已清除 ${jobIds.length} 项`);
         }
 
         function animateRemove(jobId) {
@@ -1487,17 +1487,17 @@
         function getStatusText(status, progress) {
             if (status === 'processing') {
                 if (progress?.status === 'waiting') return '等待中';
-                return '處理中';
+                return '处理中';
             }
-            return { done: '完成', error: '失敗', cancelled: '已取消' }[status] || status;
+            return { done: '完成', error: '失败', cancelled: '已取消' }[status] || status;
         }
 
         function formatProgressText(job) {
             if (job.status !== 'processing') return '';
             const progress = job.progress || {};
             if (progress.message) return progress.message;
-            if (progress.status === 'waiting') return '等待其他任務完成...';
-            return '處理中...';
+            if (progress.status === 'waiting') return '等待其他任务完成...';
+            return '处理中...';
         }
 
         function renderJobCard(jobId, job) {
@@ -1576,13 +1576,13 @@
                         : `/api/download/word/${encodeURIComponent(r.download_id)}${nameParam}`;
                 const baseName = r.original_name ? r.original_name.replace(/\.[^/.]+$/, '') : r.download_id;
                 const filename = mode === 'ocr' ? r.original_name : `${baseName}.${mode === 'markdown' ? 'zip' : 'docx'}`;
-                const pageInfo = r.total_pages + ' 頁' + (r.images_count > 0 ? `，${r.images_count} 張圖片` : '');
+                const pageInfo = r.total_pages + ' 页' + (r.images_count > 0 ? `，${r.images_count} 张图片` : '');
 
                 resultHtml = `
                     <div class="job-result">
                         <div class="job-result-icon">${icons.check}</div>
                         <div class="job-result-text">
-                            <h3>轉換完成</h3>
+                            <h3>转换完成</h3>
                             <p>${pageInfo}</p>
                         </div>
                     </div>
@@ -1594,9 +1594,9 @@
                             data-url="${escapeAttr(downloadUrl)}"
                             data-filename="${escapeAttr(filename)}"
                         >
-                            ${icons.download} 下載
+                            ${icons.download} 下载
                         </button>
-                        ${mode === 'markdown' ? `<button class="btn-secondary" data-action="preview" data-folder-id="${escapeAttr(r.download_id)}">${icons.eye} 預覽</button>` : ''}
+                        ${mode === 'markdown' ? `<button class="btn-secondary" data-action="preview" data-folder-id="${escapeAttr(r.download_id)}">${icons.eye} 预览</button>` : ''}
                         <button class="btn-dismiss" data-action="dismiss" data-job-id="${escapeAttr(jobId)}" data-download-id="${escapeAttr(r.download_id)}">
                             ${icons.trash} 移除
                         </button>
@@ -1606,7 +1606,7 @@
 
             if (job.status === 'error') {
                 resultHtml = `
-                    <div class="error-message">${escapeHtml(job.error || '處理時發生錯誤')}</div>
+                    <div class="error-message">${escapeHtml(job.error || '处理时发生错误')}</div>
                     <div class="job-buttons">
                         <button class="btn-dismiss" data-action="dismiss" data-job-id="${escapeAttr(jobId)}" data-download-id="">${icons.trash} 移除</button>
                     </div>
@@ -1732,7 +1732,7 @@
                 const job = await response.json();
                 const existingJob = activeJobs[jobId] || {};
                 const normalizedProgress = normalizeProgress(job.progress) || existingJob.progress;
-                job.progress = normalizedProgress || { percent: 0, message: '處理中...' };
+                job.progress = normalizedProgress || { percent: 0, message: '处理中...' };
                 activeJobs[jobId] = job;
                 ensureJobOrder(jobId);
                 scheduleJobsSave();
@@ -1741,7 +1741,7 @@
                 // Check for terminal states
                 if (job.status === 'done') {
                     if (state.lastStatus !== 'done') {
-                        showToast('轉換完成');
+                        showToast('转换完成');
                     }
                     updateJobsHeader();
                     state.lastStatus = 'done';
@@ -1754,7 +1754,7 @@
                     return;
                 } else if (job.status === 'error') {
                     if (state.lastStatus !== 'error') {
-                        showToast('轉換失敗: ' + (job.error || '未知錯誤'), 'error');
+                        showToast('转换失败: ' + (job.error || '未知错误'), 'error');
                     }
                     updateJobsHeader();
                     state.lastStatus = 'error';
@@ -1809,7 +1809,7 @@
 
             const headers = csrfToken ? { 'X-CSRFToken': csrfToken } : {};
             const response = await fetch(endpoint, { method: 'POST', body: formData, headers });
-            if (!response.ok) throw new Error('伺服器錯誤: ' + response.status);
+            if (!response.ok) throw new Error('服务器错误: ' + response.status);
 
             const data = await response.json();
             const jobs = data.jobs || [];
@@ -1818,7 +1818,7 @@
                     filename: job.filename,
                     status: 'processing',
                     mode: modeNames[mode],
-                    progress: { percent: 0, message: '準備中...' }
+                    progress: { percent: 0, message: '准备中...' }
                 };
                 ensureJobOrder(job.job_id);
                 renderJobCard(job.job_id, activeJobs[job.job_id]);
@@ -1847,7 +1847,7 @@
 
                     const headers = csrfToken ? { 'X-CSRFToken': csrfToken } : {};
                     const response = await fetch('/api/export', { method: 'POST', body: formData, headers });
-                    if (!response.ok) throw new Error('伺服器錯誤: ' + response.status);
+                    if (!response.ok) throw new Error('服务器错误: ' + response.status);
 
                     const data = await response.json();
 
@@ -1858,7 +1858,7 @@
                                 filename: pair.filename,
                                 status: 'processing',
                                 mode: job.mode,
-                                progress: { percent: 0, message: '準備中...' }
+                                progress: { percent: 0, message: '准备中...' }
                             };
                             ensureJobOrder(job.job_id);
                             renderJobCard(job.job_id, activeJobs[job.job_id]);
@@ -1883,7 +1883,7 @@
                 renderFileList();
                 updateProcessButton();
             } catch (error) {
-                showToast('錯誤: ' + error.message);
+                showToast('错误: ' + error.message);
             } finally {
                 processBtn.disabled = selectedFiles.length === 0 || selectedModes.size === 0;
                 processBtn.classList.remove('loading');
@@ -1922,7 +1922,7 @@
                 const headers = csrfToken ? { 'X-CSRFToken': csrfToken } : {};
                 const response = await fetch(`/api/cancel/${jobId}`, { method: 'POST', headers });
                 if (response.ok) {
-                    showToast('已取消處理');
+                    showToast('已取消处理');
                     if (activeJobs[jobId]) {
                         activeJobs[jobId].status = 'cancelled';
                         renderJobCard(jobId, activeJobs[jobId]);
@@ -1964,7 +1964,7 @@
                 selectedJobs.delete(jobId);
             }
             updateBatchActions();
-            showToast(`開始下載 ${jobIds.length} 個檔案`);
+            showToast(`开始下载 ${jobIds.length} 个文件`);
         }
 
         async function batchDismiss() {
@@ -1980,7 +1980,7 @@
                 selectedJobs.delete(jobId);
             }
             updateBatchActions();
-            showToast(`已移除 ${jobIds.length} 項`);
+            showToast(`已移除 ${jobIds.length} 项`);
         }
 
         function clearSelection() {
@@ -1997,13 +1997,13 @@
         async function previewMarkdown(folderId) {
             try {
                 const response = await fetch(`/api/view/markdown/${encodeURIComponent(folderId)}`);
-                if (!response.ok) throw new Error('無法載入預覽');
+                if (!response.ok) throw new Error('无法加载预览');
                 const data = await response.json();
                 document.getElementById('modalTitle').textContent = data.filename;
                 document.getElementById('markdownContent').textContent = data.content;
                 previewModal.classList.add('show');
             } catch (error) {
-                showToast('預覽載入失敗');
+                showToast('预览加载失败');
             }
         }
 
